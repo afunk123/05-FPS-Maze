@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Southwestern Passage" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, 0 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 15.0
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 21.0

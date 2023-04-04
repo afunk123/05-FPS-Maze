@@ -75,7 +75,6 @@ mesh = SubResource( 3 )
 transform = Transform( 20, 1.19209e-07, -4.18629e-06, -1.19209e-07, 20, -1.54972e-06, 4.3856e-06, 1.78814e-06, 20, 2.11532, 0.569212, 25.3075 )
 light_color = Color( 1, 0.886275, 0, 1 )
 light_energy = 16.0
-omni_range = 3.0
 omni_attenuation = 2.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/detailBowl.obj-7ba4fe76c49c09915930dbef60c39851.mesh"
+
+[deps]
+
+files=[ "res://.import/detailBowl.obj-7ba4fe76c49c09915930dbef60c39851.mesh" ]
+
+source_file="res://Characters/Characters 2/Models/OBJ format/detailBowl.obj"
+dest_files=[ "res://.import/detailBowl.obj-7ba4fe76c49c09915930dbef60c39851.mesh", "res://.import/detailBowl.obj-7ba4fe76c49c09915930dbef60c39851.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

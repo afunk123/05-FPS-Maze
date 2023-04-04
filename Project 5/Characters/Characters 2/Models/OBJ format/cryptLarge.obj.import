@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cryptLarge.obj-2737f66030e292b859679de715513bdb.mesh"
+
+[deps]
+
+files=[ "res://.import/cryptLarge.obj-2737f66030e292b859679de715513bdb.mesh" ]
+
+source_file="res://Characters/Characters 2/Models/OBJ format/cryptLarge.obj"
+dest_files=[ "res://.import/cryptLarge.obj-2737f66030e292b859679de715513bdb.mesh", "res://.import/cryptLarge.obj-2737f66030e292b859679de715513bdb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
