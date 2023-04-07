@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/3D Gold Stacked OBJ.obj-54dd7d51a3c5a780058ed7b38e6a5849.mesh"
+
+[deps]
+
+files=[ "res://.import/3D Gold Stacked OBJ.obj-54dd7d51a3c5a780058ed7b38e6a5849.mesh" ]
+
+source_file="res://Assets/Gold/OBJ/3D Gold Stacked OBJ.obj"
+dest_files=[ "res://.import/3D Gold Stacked OBJ.obj-54dd7d51a3c5a780058ed7b38e6a5849.mesh", "res://.import/3D Gold Stacked OBJ.obj-54dd7d51a3c5a780058ed7b38e6a5849.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

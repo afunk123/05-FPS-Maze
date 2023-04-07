@@ -1,0 +1,134 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Roughness.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_NormalGL.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Color.jpg" type="Texture" id=3]
+[ext_resource path="res://Rooms/Crystal.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
+
+[node name="Snake Tunnel Connection" type="Node2D"]
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 0.0270844, 0, -0.999633, 0, 1, 0, 0.999633, 0, 0.0270844, 22.7851, 2.76135, -30.7906 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 6.0
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 21.0
+material = SubResource( 3 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( -0.257723, 0, -0.966218, 0, 1, 0, 0.966218, 0, -0.257723, 27.8873, 2.76135, -30.3006 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 6.0
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 21.0
+material = SubResource( 3 )
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( -0.606418, 0, -0.795146, 0, 1, 0, 0.795146, 0, -0.606418, 31.45, 2.8, -28.3 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 6.0
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 21.0
+material = SubResource( 3 )
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( -0.766045, 0, -0.642787, 0, 1, 0, 0.642787, 0, -0.766045, 35.9652, 2.8, -24.1768 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 8.0
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 21.0
+material = SubResource( 3 )
+
+[node name="CSGBox7" type="CSGBox" parent="."]
+transform = Transform( -0.422618, 0, 0.906307, 0, 1, 0, -0.906307, 0, -0.422618, 39.8, 2.8, -16.8 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 12.0
+material = SubResource( 3 )
+
+[node name="CSGBox3" type="CSGBox" parent="CSGBox7"]
+transform = Transform( 1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, -0.0999999, 3.8147e-06 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 17.481
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox7"]
+transform = Transform( 0.189678, 0, -0.981847, 0, 1, 0, 0.981847, 0, 0.189678, 0.910608, -0.0999999, 1.35275 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 4.29122
+material = SubResource( 3 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( -0.896471, 0, -0.443102, 0, 1, 0, 0.443102, 0, -0.896471, 38.8, 2.732, -20.702 )
+use_collision = true
+width = 5.0
+height = 6.0
+depth = 3.259
+material = SubResource( 3 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGBox6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0999999, 0 )
+operation = 2
+width = 4.6
+height = 5.6
+depth = 10.72
+material = SubResource( 3 )
+
+[node name="Crystal" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 33, 0, -30 )
+
+[node name="Crystal2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 25, 7, -30 )
+
+[node name="Crystal3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.5, 0.866025, 3.78552e-08, 0, -4.37114e-08, 1, 0.866025, -0.5, -2.18557e-08, 35, 3, -20 )
+
+[node name="Crystal4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.863287, -0.320377, 0.381811, 0, -0.763622, -0.640755, 0.498419, 0.55491, -0.661316, 39, 6, -25 )
+
+[node name="Crystal5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.03934, 0, 0, 0, -2.27156e-08, 1.03934, 0, -0.519671, -4.54311e-08, 43, 4, -15 )

@@ -7,4 +7,4 @@ func _ready():
 
 func _on_Area_body_entered(body):
 	if body.name == "Player":
-		$Player.global_position = Vector3(0, 0, 0)
+		get_node_or_null("/root/Game/Player").transform.origin = Vector3(0, 0, 0)

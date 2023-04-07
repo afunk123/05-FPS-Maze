@@ -1,4 +1,15 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Roughness.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_NormalGL.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Color.jpg" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
 
 [node name="Chasm\'s Edge" type="Spatial"]
 
@@ -8,15 +19,18 @@ use_collision = true
 inner_radius = 2.9
 sides = 25
 ring_sides = 10
+material = SubResource( 3 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="CSGTorus"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0642923, -0.00351442, 1.17968 )
 operation = 2
 radius = 4.0
 height = 0.104
+material = SubResource( 3 )
 
 [node name="CSGSphere3" type="CSGSphere" parent="CSGTorus"]
 transform = Transform( 0.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, -0.07, -3 )
 operation = 2
 radius = 1.07808
 radial_segments = 20
+material = SubResource( 3 )

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/3D Gold OBJ.obj-f29712814f1502af6c4f6382579c0558.mesh"
+
+[deps]
+
+files=[ "res://.import/3D Gold OBJ.obj-f29712814f1502af6c4f6382579c0558.mesh" ]
+
+source_file="res://Assets/Gold/OBJ/3D Gold OBJ.obj"
+dest_files=[ "res://.import/3D Gold OBJ.obj-f29712814f1502af6c4f6382579c0558.mesh", "res://.import/3D Gold OBJ.obj-f29712814f1502af6c4f6382579c0558.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

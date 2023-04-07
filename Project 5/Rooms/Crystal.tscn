@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Crystals/Meshes/OBJ/SM_CrystalMetal_01.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Crystals/Textures/T_CrystalMetal_01_m.tga" type="Texture" id=2]
+[ext_resource path="res://Assets/Crystals/Textures/T_CrystalMetal_01_n.tga" type="Texture" id=3]
+[ext_resource path="res://Assets/Crystals/Textures/T_CrystalMetal_01_AO.tga" type="Texture" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 1, 0.647059, 1 )
+albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )
+clearcoat_enabled = true
+clearcoat = 1.0
+clearcoat_gloss = 1.0
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 4 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+
+[node name="Crystal" type="Spatial"]
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material = SubResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="CSGMesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0 )
+light_color = Color( 0, 1, 0.623529, 1 )
+light_energy = 40.0
+light_specular = 3.0
+omni_range = 1.5
+omni_attenuation = 0.48297
+
+[node name="OmniLight2" type="OmniLight" parent="CSGMesh"]
+transform = Transform( -100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, -200 )
+light_color = Color( 0, 1, 0.623529, 1 )
+
+[node name="OmniLight3" type="OmniLight" parent="CSGMesh"]
+transform = Transform( -100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 200 )
+light_color = Color( 0, 1, 0.623529, 1 )
+
+[node name="OmniLight4" type="OmniLight" parent="CSGMesh"]
+transform = Transform( -100, 0, 0, 0, 100, 0, 0, 0, 100, 200, 0, 0 )
+light_color = Color( 0, 1, 0.623529, 1 )
+
+[node name="OmniLight5" type="OmniLight" parent="CSGMesh"]
+transform = Transform( -100, 0, 0, 0, 100, 0, 0, 0, 100, -200, 0, 0 )
+light_color = Color( 0, 1, 0.623529, 1 )
