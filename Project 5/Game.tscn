@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Global.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Assets/Water/others_0020_roughness_1k.jpg" type="Texture" id=23]
 [ext_resource path="res://Assets/Water/others_0020_normal_directx_1k.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Water/others_0020_color_1k.jpg" type="Texture" id=25]
+[ext_resource path="res://Rooms/Treasure Room.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Environment" id=10]
 background_mode = 2
@@ -159,6 +160,9 @@ transform = Transform( -0.866026, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866026, 25.9, 0, 
 
 [node name="Lake" parent="Maze" instance=ExtResource( 20 )]
 transform = Transform( 0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -7.4, 0, -45 )
+
+[node name="Treasure Room" parent="Maze" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 10 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 

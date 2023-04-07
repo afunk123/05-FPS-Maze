@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/T_CrystalMetal_01_h.tga-338f1942c27a78910b19c6d6d17e53ed.s3tc.stex"
-path.etc2="res://.import/T_CrystalMetal_01_h.tga-338f1942c27a78910b19c6d6d17e53ed.etc2.stex"
+path.s3tc="res://.import/blue-geometric-background_53876-114454.webp-1a5f5afe05eede3866eb183be57a7226.s3tc.stex"
+path.etc2="res://.import/blue-geometric-background_53876-114454.webp-1a5f5afe05eede3866eb183be57a7226.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Crystals/Textures/T_CrystalMetal_01_h.tga"
-dest_files=[ "res://.import/T_CrystalMetal_01_h.tga-338f1942c27a78910b19c6d6d17e53ed.s3tc.stex", "res://.import/T_CrystalMetal_01_h.tga-338f1942c27a78910b19c6d6d17e53ed.etc2.stex" ]
+source_file="res://Assets/Diamond/blue-geometric-background_53876-114454.webp"
+dest_files=[ "res://.import/blue-geometric-background_53876-114454.webp-1a5f5afe05eede3866eb183be57a7226.s3tc.stex", "res://.import/blue-geometric-background_53876-114454.webp-1a5f5afe05eede3866eb183be57a7226.etc2.stex" ]
 
 [params]
 
