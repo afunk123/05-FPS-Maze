@@ -7,7 +7,7 @@ func _ready():
 
 func _on_RNC_T_Sprite_body_entered(body):
 	if body.name == "Player":
-		get_node_or_null("/root/Game/Player").transform.origin = Vector3(40, 0, 7)
+		get_node_or_null("/root/Game/Player").transform.origin = Vector3(40, 0, 5)
 
 func _on_RNC_BL_Sprite_body_entered(body):
 	if body.name == "Player":

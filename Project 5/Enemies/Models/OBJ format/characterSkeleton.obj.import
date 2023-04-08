@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/characterSkeleton.obj-f6501a1d6fe5981c4218109e0c328333.mesh"
+
+[deps]
+
+files=[ "res://.import/characterSkeleton.obj-f6501a1d6fe5981c4218109e0c328333.mesh" ]
+
+source_file="res://Enemies/Models/OBJ format/characterSkeleton.obj"
+dest_files=[ "res://.import/characterSkeleton.obj-f6501a1d6fe5981c4218109e0c328333.mesh", "res://.import/characterSkeleton.obj-f6501a1d6fe5981c4218109e0c328333.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/characterVampire.obj-b0cda2ada54ebe9e7c54a3d7360953b4.mesh"
+
+[deps]
+
+files=[ "res://.import/characterVampire.obj-b0cda2ada54ebe9e7c54a3d7360953b4.mesh" ]
+
+source_file="res://Enemies/Models/OBJ format/characterVampire.obj"
+dest_files=[ "res://.import/characterVampire.obj-b0cda2ada54ebe9e7c54a3d7360953b4.mesh", "res://.import/characterVampire.obj-b0cda2ada54ebe9e7c54a3d7360953b4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

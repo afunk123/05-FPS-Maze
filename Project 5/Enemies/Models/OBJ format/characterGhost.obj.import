@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/characterGhost.obj-975342afcbf75b339a3e2e369e9a613b.mesh"
+
+[deps]
+
+files=[ "res://.import/characterGhost.obj-975342afcbf75b339a3e2e369e9a613b.mesh" ]
+
+source_file="res://Enemies/Models/OBJ format/characterGhost.obj"
+dest_files=[ "res://.import/characterGhost.obj-975342afcbf75b339a3e2e369e9a613b.mesh", "res://.import/characterGhost.obj-975342afcbf75b339a3e2e369e9a613b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

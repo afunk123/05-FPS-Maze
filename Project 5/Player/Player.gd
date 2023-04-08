@@ -8,7 +8,9 @@ var direction = Vector3()
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 
-var velocity = Vector2.ZERO
+
+var velocity = Vector3.ZERO
+
 
 func get_input():
 	var input_dir = Vector3.ZERO
@@ -20,6 +22,8 @@ func get_input():
 		input_dir += -camera.global_transform.basis.x
 	if Input.is_action_pressed("right"):
 		input_dir += camera.global_transform.basis.x
+	if Input.is_action_just_pressed("jump"):
+		velocity = Vector3(0,3,0)
 	input_dir = input_dir.normalized()
 	return input_dir
 
@@ -34,7 +38,7 @@ func _physics_process(_delta):
 	velocity.y += gravity
 	if is_on_floor():
 		velocity.y = 0
+		print(velocity.y)
 	if velocity != Vector3.ZERO:
-		velocity = move_and_slide(velocity, Vector3.UP)
+		velocity = move_and_slide_with_snap(velocity, Vector3.UP)
 
-	

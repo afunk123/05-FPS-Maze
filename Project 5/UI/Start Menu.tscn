@@ -1,0 +1,106 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Fonts/quantrh.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Bro_4D_Demo.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/junegull.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/Start Menu.gd" type="Script" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=5]
+light_mode = 2
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+extra_spacing_char = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+light_mode = 2
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+extra_spacing_char = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 1, 0.623529, 1 )
+
+[sub_resource type="GradientTexture" id=8]
+gradient = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+extra_spacing_char = 3
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+extra_spacing_char = 3
+font_data = ExtResource( 3 )
+
+[node name="Start Menu" type="Control"]
+script = ExtResource( 4 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+material = SubResource( 5 )
+margin_left = 162.0
+margin_top = 80.0
+margin_right = 662.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 1 )
+text = "Nexus"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Label"]
+material = SubResource( 6 )
+margin_left = 518.0
+margin_top = -30.0
+margin_right = 708.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 2 )
+text = "3D"
+
+[node name="Light2D" type="Light2D" parent="Label"]
+position = Vector2( 350, 50 )
+scale = Vector2( 0.407, 120 )
+texture = SubResource( 8 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 177.0
+margin_top = 89.0
+margin_right = 894.0
+margin_bottom = 474.0
+custom_fonts/font = SubResource( 9 )
+text = "Escape the Network
+"
+align = 1
+valign = 1
+
+[node name="Start" type="Button" parent="."]
+margin_left = 437.0
+margin_top = 320.0
+margin_right = 587.0
+margin_bottom = 380.0
+custom_fonts/font = SubResource( 3 )
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 437.0
+margin_top = 420.0
+margin_right = 587.0
+margin_bottom = 480.0
+custom_fonts/font = SubResource( 4 )
+text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

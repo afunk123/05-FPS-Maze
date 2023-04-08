@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Global.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Torch/torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Sounds/Nexus Background Music.mp3" type="AudioStream" id=3]
 [ext_resource path="res://UI/Menu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Rooms/Southwestern Passage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Rooms/Western Passage.tscn" type="PackedScene" id=6]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Assets/Water/others_0020_normal_directx_1k.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Water/others_0020_color_1k.jpg" type="Texture" id=25]
 [ext_resource path="res://Rooms/Treasure Room.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Assets/Sounds/Diamond Sound.wav" type="AudioStream" id=27]
+[ext_resource path="res://Assets/Sounds/Skeleton Sound.wav" type="AudioStream" id=28]
 
 [sub_resource type="Environment" id=10]
 background_mode = 2
@@ -57,6 +59,10 @@ ao_texture = ExtResource( 22 )
 ao_on_uv2 = false
 ao_texture_channel = 0
 
+[sub_resource type="SpatialMaterial" id=11]
+params_diffuse_mode = 4
+albedo_color = Color( 0, 0, 0, 1 )
+
 [node name="Game" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -70,8 +76,8 @@ environment = SubResource( 10 )
 [node name="Chasm" type="CSGBox" parent="Maze/Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 use_collision = true
-width = 200.0
-depth = 200.0
+width = 140.0
+depth = 130.0
 material = SubResource( 8 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="Maze/Ground/Chasm"]
@@ -114,7 +120,7 @@ radial_segments = 30
 material = SubResource( 8 )
 
 [node name="CSGBox2" type="CSGBox" parent="Maze/Ground/Chasm/Lake bottom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.4, 0 )
 width = 12.0
 depth = 12.0
 material = SubResource( 8 )
@@ -149,6 +155,61 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.6, 0
 [node name="Chasm\'s Edge" parent="Maze" instance=ExtResource( 10 )]
 transform = Transform( -0.612836, 0, -0.642788, 0, 1, 0, 0.51423, 0, -0.766044, -20.8, 0, -24.6 )
 
+[node name="CSGBox" type="CSGBox" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 0, 0, 1, -13.3343, -0.0515563, 3.64356 )
+height = 12.517
+depth = 31.313
+material = SubResource( 11 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, 0.7, 1, -1 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, 3, 1, -1 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder3" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, -2, 1, -1.9 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder4" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, -4.3, 1, -3.5 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder5" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -1.19209e-07, 0, 1, 0, 0, 0, 1, -6, 1, -5 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder6" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, 5, 1, -2.4 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
+[node name="CSGCylinder7" type="CSGCylinder" parent="Maze/Chasm\'s Edge"]
+transform = Transform( 1, 0, -5.96046e-08, 0, 1, 0, 0, 0, 1, 6, 1, -4.5 )
+use_collision = true
+height = 3.0
+cone = true
+material = SubResource( 8 )
+
 [node name="Dead End" parent="Maze" instance=ExtResource( 11 )]
 transform = Transform( -0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 12, 0, -46 )
 
@@ -166,8 +227,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 10 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
-[node name="torch" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -1.724, 0.299, -1 )
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 2.0
+autoplay = true
+
+[node name="Skeleton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -20.0
+
+[node name="Diamond" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 

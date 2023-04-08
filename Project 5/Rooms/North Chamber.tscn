@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Glyphs/NC Front Glyph.png" type="Texture" id=1]
 [ext_resource path="res://Rooms/Real North Chamber.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Roughness.jpg" type="Texture" id=7]
 [ext_resource path="res://Assets/Materials/Walls/Rock035_1K_NormalGL.jpg" type="Texture" id=8]
 [ext_resource path="res://Assets/Materials/Walls/Rock035_1K_Color.jpg" type="Texture" id=9]
+[ext_resource path="res://Enemy/Skeleton.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 9 )
@@ -127,6 +128,9 @@ transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="CSGTorus/NC L Sprite/NC L Sprite"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 1.19209e-07, 0, 1, -0.00277972, -0.02632, -0.0414691 )
 shape = SubResource( 2 )
+
+[node name="Skeleton" parent="." instance=ExtResource( 10 )]
+transform = Transform( -1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 0, 0, 0 )
 
 [connection signal="body_entered" from="CSGTorus/NC T Sprite/NC T Sprite" to="." method="_on_NC_T_Sprite_body_entered"]
 [connection signal="body_entered" from="CSGTorus/NC BL Sprite/NC BL Sprite" to="." method="_on_NC_BL_Sprite_body_entered"]

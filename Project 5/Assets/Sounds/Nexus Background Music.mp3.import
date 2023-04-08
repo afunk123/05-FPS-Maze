@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Nexus Background Music.mp3-1fc846a00518eca05112609bc0f6f70a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Nexus Background Music.mp3"
+dest_files=[ "res://.import/Nexus Background Music.mp3-1fc846a00518eca05112609bc0f6f70a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
