@@ -11,6 +11,8 @@ var mouse_range = 1.2
 
 var velocity = Vector3.ZERO
 
+onready var rc = $Pivot/RayCast
+onready var flash = $Pivot/Blaster/Flash
 
 func get_input():
 	var input_dir = Vector3.ZERO
@@ -22,8 +24,6 @@ func get_input():
 		input_dir += -camera.global_transform.basis.x
 	if Input.is_action_pressed("right"):
 		input_dir += camera.global_transform.basis.x
-	if Input.is_action_just_pressed("jump"):
-		velocity = Vector3(0,3,0)
 	input_dir = input_dir.normalized()
 	return input_dir
 
@@ -41,4 +41,13 @@ func _physics_process(_delta):
 		print(velocity.y)
 	if velocity != Vector3.ZERO:
 		velocity = move_and_slide_with_snap(velocity, Vector3.UP)
-
+	
+	if Input.is_action_pressed("shoot"):
+		flash.shoot()
+		var sound = get_node_or_null("/root/Game/Shoot")
+		if sound != null:
+			sound.playing = true
+		if rc.is_colliding():
+			var c = rc.get_collider()
+			if c.name == "Skeleton":
+				c.queue_free()

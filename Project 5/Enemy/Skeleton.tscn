@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemy/Skeleton.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/Models/GLTF format/wax.material" type="Material" id=2]
 [ext_resource path="res://Enemies/Models/GLTF format/woodDark.material" type="Material" id=3]
+
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 0.243879, 0.414415, 0.155704 )
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "characterSkeleton_Mesh armLeft"
@@ -106,14 +109,18 @@ surfaces/0 = {
 "vertex_count": 54
 }
 
-[sub_resource type="SphereShape" id=7]
-
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.234128, 0.494528, 0.176655 )
 
-[node name="Skeleton" type="Area"]
+[sub_resource type="SphereShape" id=7]
+
+[node name="Skeleton" type="KinematicBody"]
 transform = Transform( 3, 0, 0, 0, 4, 0, 0, 0, 3, 0, 0, 0 )
 script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.397025, 0 )
+shape = SubResource( 9 )
 
 [node name="characterSkeleton" type="Spatial" parent="."]
 
@@ -141,10 +148,6 @@ mesh = SubResource( 5 )
 transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0.13, 0.223184, 0 )
 mesh = SubResource( 6 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.442457, 0 )
-shape = SubResource( 7 )
-
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 omni_range = 1.5
@@ -155,5 +158,11 @@ omni_range = 1.5
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.412278, 0 )
 shape = SubResource( 8 )
 
-[connection signal="body_entered" from="." to="." method="_on_Skeleton_body_entered"]
+[node name="Growl" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Growl"]
+transform = Transform( 3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.442457, 0 )
+shape = SubResource( 7 )
+
 [connection signal="body_entered" from="Damage" to="." method="_on_Damage_body_entered"]
+[connection signal="body_entered" from="Growl" to="." method="_on_Growl_body_entered"]
