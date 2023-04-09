@@ -7,6 +7,9 @@ Inspect all that piques your interets, but watch out for the monsters that lurk 
 
 ## Implementation
 
+Crystals:
+- Greatly edited Crystal Meterial 
+
 Glyphs
 - Made in Pixil
 - - North Passage Glyph
